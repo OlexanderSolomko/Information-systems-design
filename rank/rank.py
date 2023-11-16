@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def load_and_filter_data(file_path, country):
     gdf = gpd.read_file(file_path)
     return gdf[gdf['country'] == country]
-
+#changes for commit
 def plot_top_n_universities(gdf, n=10, crs='epsg:4326', figsize=(12, 6), cmap='coolwarm'):
     top_n_universities = gdf.sort_values(by='national_rank').head(n)
     top_n_universities = top_n_universities.to_crs(crs)
